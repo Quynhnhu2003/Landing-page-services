@@ -1,0 +1,34 @@
+.menuContainer {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 62px;
+  @media (max-width: 728px) {
+    gap: 18px;
+  }
+  &__item {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #ffffffb8;
+    @media (max-width: 728px) {
+      font-size: 16px;
+    }
+  }
+}
+.active {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #e1c084;
+  @media (max-width: 728px) {
+    font-size: 18px;
+  }
+}

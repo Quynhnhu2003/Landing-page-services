@@ -30,6 +30,10 @@ html {
 body {
   background: #F8FAFC;
 }
+
+main {
+  height: 100vh;
+}
 .animate-bounce-slow {
   animation: bounce-slow 3s ease-in-out infinite;
 }
