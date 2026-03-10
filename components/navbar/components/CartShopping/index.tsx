@@ -2,10 +2,7 @@
 import styles from "./index.module.scss";
 
 // ** Another Import
-
-type CartShoppingProps = {
-    quantity: number
-}
+import { CartShoppingProps } from "@/ultils/type/NavbarType";
 
 function CartShopping({quantity}: CartShoppingProps) {
   return (

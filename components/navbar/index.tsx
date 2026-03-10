@@ -4,14 +4,11 @@
 import styles from "./index.module.scss";
 
 // ** Another Import
-import Menu from "./components/Menu";
 import { useState } from "react";
+import Menu from "./components/Menu";
 import CartShopping from "./components/CartShopping";
-
-export type SectionsType = {
-  id:string;
-  label:string;
-}
+import { SectionsType } from "@/ultils/type/NavbarType";
+import Image from "next/image";
 
 const sections: SectionsType[] = [
   { id: "home", label: "Trang chủ" },
@@ -32,7 +29,9 @@ export default function Navbar() {
           <p>English</p>
         </div>
         <div className={styles.logo}>
-          <img
+          <Image
+          width={100}
+          height={100}
             src="https://res.cloudinary.com/dwcg5odh2/image/upload/v1773049732/Frame_1321316155_ewrwbe.png"
             alt="logo"
           />
