@@ -3,16 +3,18 @@
 // ** Styles Import
 import styles from "./index.module.scss";
 
-// ** Another Import
-import { useState } from "react";
+// ** Components Import
 import Menu from "./components/Menu";
-import CartShopping from "./components/CartShopping";
-import { CartItemsType, SectionsType } from "@/ultils/type/NavbarType";
-import Image from "next/image";
 import CartDrawer from "./components/CartDrawer";
 import CartContent from "./components/CartContent";
+import CartShopping from "./components/CartShopping";
 import BookingConfirm from "./components/BookingConfirm";
 import BookingSuccessModal from "./components/BookingSuccessModal";
+
+// ** Another Import
+import Image from "next/image";
+import { useState } from "react";
+import { CartItemsType, SectionsType } from "@/ultils/type/NavbarType";
 
 const sections: SectionsType[] = [
   { id: "home", label: "Trang chủ" },
