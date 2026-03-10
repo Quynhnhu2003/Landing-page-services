@@ -33,6 +33,7 @@ body {
 
 main {
   height: 100vh;
+  background-color: #523c14;
 }
 .animate-bounce-slow {
   animation: bounce-slow 3s ease-in-out infinite;

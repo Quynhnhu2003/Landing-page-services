@@ -1,6 +1,8 @@
 .servicesContainer {
   padding: 80px 120px;
-  background: linear-gradient(180deg, #7a4b13, #4a2c08);
+  background: url("https://res.cloudinary.com/dwcg5odh2/image/upload/v1773147141/Mask_group_j4cyt1.png"),
+    #523c14;
+  background-size: 100% 100%;
   color: white;
   @media (max-width: 1200px) {
     position: relative;
@@ -16,7 +18,7 @@
     @media (max-width: 768px) {
       font-size: 32px;
       margin-bottom: 1rem;
-      padding: unset!important;
+      padding: unset !important;
     }
     @media (max-width: 1024px) {
       padding: 60px 40px;
