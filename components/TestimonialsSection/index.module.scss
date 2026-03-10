@@ -1,0 +1,104 @@
+.testimonials {
+  padding: 120px 20px;
+  text-align: center;
+  background: linear-gradient(rgba(90, 60, 20, 0.7), rgba(90, 60, 20, 0.7)),
+    url("https://res.cloudinary.com/dwcg5odh2/image/upload/v1773127060/testimonials_1_jvyt0p.png");
+  background-size: cover;
+  color: white;
+  @media (max-width: 1024px) {
+    padding: 100px 20px;
+  }
+  @media (max-width: 768px) {
+    padding: 70px 16px;
+  }
+  .header {
+    margin-bottom: 60px;
+    p {
+      letter-spacing: 6px;
+      font-size: 14px;
+    }
+    h2 {
+      font-size: 48px;
+      font-weight: 300;
+    }
+    @media (max-width: 1024px) {
+      h2 {
+        font-size: 36px;
+      }
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+      p {
+        font-size: 12px;
+        letter-spacing: 4px;
+      }
+      h2 {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .sliderContainer {
+    padding-bottom: 60px;
+    :global(.swiper-slide) {
+      opacity: 0.6;
+      transition: all 0.4s ease;
+    }
+    :global(.swiper-pagination) {
+      bottom: -2px;
+    }
+    :global(.swiper-slide-active) {
+      transform: scale(1.15);
+      opacity: 1;
+    }
+    :global(.swiper-pagination-bullet) {
+      width: 8px;
+      height: 8px;
+      background: #dad3ca;
+      opacity: 0.4;
+      position: relative;
+      bottom: -10%;
+    }
+    :global(.swiper-pagination-bullet-active) {
+      opacity: 1;
+    }
+    :global(.swiper-pagination-bullet-active)::after {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border: 1px solid #dad3ca;
+      border-radius: 50%;
+    }
+    :global(.swiper-slide-prev),
+    :global(.swiper-slide-next) {
+      transform: scale(0.8) !important;
+    }
+    @media (max-width: 1024px) {
+      padding-bottom: 60px;
+      :global(.swiper-slide-active) {
+        transform: scale(1.08);
+      }
+      :global(.swiper-slide-prev),
+      :global(.swiper-slide-next) {
+        transform: scale(0.9) !important;
+      }
+    }
+    @media (max-width: 768px) {
+      padding-bottom: 50px;
+      :global(.swiper-slide) {
+        opacity: 1;
+      }
+      :global(.swiper-slide-active) {
+        transform: scale(1);
+      }
+      :global(.swiper-slide-prev),
+      :global(.swiper-slide-next) {
+        transform: scale(1) !important;
+      }
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
