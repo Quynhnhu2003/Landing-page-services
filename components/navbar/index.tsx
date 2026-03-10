@@ -21,26 +21,60 @@ const sections: SectionsType[] = [
 export default function Navbar() {
   // ** State
   const [active, setActive] = useState<string>("services");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  // ** function
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <div className={styles.navbarContainer}>
       <div className={styles.navbarContainer__header}>
-        <div className={styles.language}>
-          <p>English</p>
-        </div>
+        <div className={styles.language}>English</div>
+
         <div className={styles.logo}>
           <Image
-          width={100}
-          height={100}
+            width={200}
+            height={60}
             src="https://res.cloudinary.com/dwcg5odh2/image/upload/v1773049732/Frame_1321316155_ewrwbe.png"
             alt="logo"
           />
         </div>
-        <CartShopping quantity={3} />
+
+        <div className={styles.right}>
+          <div className={styles.cartDesktop}>
+            <CartShopping quantity={3} />
+          </div>
+
+          <button
+            className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
 
-      <div className={styles.navbarContainer__menu}>
-        <Menu active={active} setActive={setActive} sections={sections} />
+      {isOpen && <div className={styles.overlay} onClick={closeMenu} />}
+
+      <div
+        className={`${styles.navbarContainer__menu} ${
+          isOpen ? styles.open : ""
+        }`}
+      >
+        <Menu
+          active={active}
+          setActive={(id) => {
+            setActive(id);
+            closeMenu();
+          }}
+          sections={sections}
+        />
+
+        <div className={styles.cartMobile}>
+          <CartShopping quantity={3} />
+        </div>
       </div>
     </div>
   );

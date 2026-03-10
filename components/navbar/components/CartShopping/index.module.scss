@@ -7,11 +7,15 @@
   justify-content: center;
   align-items: center;
   background: #824c08;
-  @media (max-width:728px) {
-    width: 80%;
-    padding: 8px;
-    gap: 8px;
+  @media (max-width: 1024px) {
+    padding: 10px 16px;
   }
+
+  @media (max-width: 768px) {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
   &__text {
     font-weight: 500;
     font-style: Medium;
@@ -22,8 +26,11 @@
     vertical-align: middle;
     text-transform: uppercase;
     color: #e5e3dc;
-    @media (max-width:728px) {
-      font-size: 12px;
+    @media (max-width: 1200px) {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      display: block;
     }
   }
   &__quantity {
