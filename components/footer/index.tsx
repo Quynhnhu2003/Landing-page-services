@@ -1,8 +1,11 @@
-"use-client";
+"use client";
 
-import Social from "./components/Social";
 // ** Styles Import
 import styles from "./index.module.scss";
+
+// ** Another import
+import Social from "./components/Social";
+import Image from "next/image";
 
 const icon = (
   <svg
@@ -17,79 +20,57 @@ const icon = (
   </svg>
 );
 
-const listData = [
-  {
-    id: "sitemap",
-    title: "sitemap",
-    item: [
-      { id: "home", label: "Trang chủ" },
-      { id: "introduction", label: "Giới thiệu" },
-      { id: "services", label: "Dịch vụ" },
-      { id: "news", label: "Tin tức" },
-      { id: "contact", label: "Liên hệ" },
-    ],
-  },
-  {
-    id: "contact",
-    title: "liên hệ",
-    item: [
-      { id: "phone", label: "+84 89 812 12 97" },
-      {
-        id: "address",
-        label: "6 Đường G, Phú Mỹ, Quận 7, TP Hồ Chí Minh (gần Crescent Mall)",
-      },
-      { id: "services", label: "Dịch vụ" },
-      { id: "news", label: "Tin tức" },
-      { id: "contact", label: "Liên hệ" },
-    ],
-  },
-];
-
-export default function Footer() {
+function Footer() {
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.footerContainer__top}>
         {/* Left */}
-          <div className={styles.footerContainer__top__logo}>
-            <img
-              src="https://res.cloudinary.com/dwcg5odh2/image/upload/v1773049732/Frame_1321316155_ewrwbe.png"
-              alt="logo"
-            />
-        </div>
-        {/* Center */}
-        <div className={styles.center}>
-          <p className={styles.label}>{icon} SITEMAP</p>
-
-          <div className={styles.links}>
-            <div>
-              <p>Trang chủ</p>
-              <p>Giới thiệu</p>
-              <p>Dịch vụ</p>
-            </div>
-
-            <div>
-              <p>Tin tức</p>
-              <p>Liên hệ</p>
-            </div>
-          </div>
+        <div className={styles.footerContainer__top__logo}>
+          <Image
+          width={100}
+          height={100}
+            src="https://res.cloudinary.com/dwcg5odh2/image/upload/v1773049732/Frame_1321316155_ewrwbe.png"
+            alt="logo"
+          />
         </div>
 
-        {/* Right */}
-        <div className={styles.right}>
-          <p className={styles.label}>{icon} LIÊN HỆ</p>
+        <div className={styles.footerContainer__top__listData}>
+          <div className={`${styles.item} ${styles["item--first"]}`}>
+            <p className={styles.item__label}>{icon} SITEMAP</p>
 
-          <div className={styles.info}>
-            <p>+84 898 812 197</p>
-            <p>
-              6 Đường 2, Phú Mỹ, Quận 7,
-              <br />
-              TP Hồ Chí Minh
-            </p>
-            <p>Thứ 2 - Thứ 6: 09:00 - 19:00</p>
-            <p>Thứ 7 - CN: 09:00 - 20:00</p>
+            <div className={styles.item__links}>
+              <div>
+                <p>Trang chủ</p>
+                <p>Giới thiệu</p>
+                <p>Dịch vụ</p>
+              </div>
+
+              <div>
+                <p>Tin tức</p>
+                <p>Liên hệ</p>
+              </div>
+            </div>
           </div>
 
-          <button className={styles.booking}>Đặt lịch ngay</button>
+          <div className={styles.bottom}>
+            <div className={styles.item}>
+              <p className={styles.item__label}>{icon} LIÊN HỆ</p>
+
+              <div className={styles.item__info}>
+                <p>+84 898 812 197</p>
+                <p>
+                  6 Đường 2, Phú Mỹ, Quận 7,
+                  <br />
+                  TP Hồ Chí Minh
+                </p>
+                <p>Thứ 2 - Thứ 6: 09:00 - 19:00</p>
+                <p>Thứ 7 - CN: 09:00 - 20:00</p>
+              </div>
+            </div>
+            <div className={styles.booking}>
+              <button>Đặt lịch ngay</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -102,3 +83,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer

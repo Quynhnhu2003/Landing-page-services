@@ -2,13 +2,7 @@
 import styles from "./index.module.scss";
 
 // ** Another Import
-import { SectionsType } from "../..";
-
-type MenuProps = {
-  active: string;
-  sections: SectionsType[];
-  setActive: (id: string) => void;
-};
+import { MenuProps, SectionsType } from "@/ultils/type/NavbarType";
 
 function Menu({ setActive, active, sections }: MenuProps) {
   // ** Function

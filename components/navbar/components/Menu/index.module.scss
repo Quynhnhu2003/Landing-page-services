@@ -5,9 +5,15 @@
   justify-content: center;
   align-items: center;
   gap: 62px;
-  @media (max-width: 728px) {
-    gap: 18px;
+  @media (max-width: 1024px) {
+    gap: 32px;
   }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
   &__item {
     cursor: pointer;
     font-weight: 400;
@@ -16,8 +22,13 @@
     letter-spacing: 0%;
     vertical-align: middle;
     color: #ffffffb8;
-    @media (max-width: 728px) {
-      font-size: 16px;
+    white-space: nowrap;
+    @media (max-width: 1024px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 14px;
     }
   }
 }
@@ -28,7 +39,7 @@
   letter-spacing: 0%;
   vertical-align: middle;
   color: #e1c084;
-  @media (max-width: 728px) {
-    font-size: 18px;
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 }

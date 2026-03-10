@@ -1,0 +1,64 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    &__img {
+      object-fit: cover;
+    }
+  }
+  &__content {
+    position: relative;
+    padding: 24px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    &__user {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+
+      &__avatar {
+        border-radius: 50%;
+      }
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0%;
+        color: #FFFFFF;
+        text-align: justify;
+      }
+    }
+    &__more {
+      display: inline-block;
+      margin-top: 8px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    &__quote {
+      position: absolute;
+      right: 8px;
+      top: -20%;
+      font-size: 60px;
+      color: #f4d27a;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.healingSection {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  background-image: url("https://res.cloudinary.com/dwcg5odh2/image/upload/v1773052739/wrapper_qwp11j.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  @media (max-width: 768px) {
+    min-height: 420px;
+    padding: 60px 16px;
+  }
+  &__content {
+    position: relative;
+    max-width: 700px;
+    color: white;
+    z-index: 2;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      @media (max-width: 1024px) {
+        font-size: 38px;
+      }
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      opacity: 0.95;
+      @media (max-width: 1024px) {
+        font-size: 16px;
+      }
+      @media (max-width: 1024px) {
+        font-size: 14px;
+      }
+    }
+
+    button {
+      background: white;
+      color: #a06a1f;
+      border: none;
+      padding: 14px 28px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: 0.3s;
+      @media (max-width: 1024px) {
+        padding: 12px 22px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background: #f5e6c8;
+      }
+    }
+  }
+}

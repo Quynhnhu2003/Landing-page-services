@@ -1,0 +1,43 @@
+.chooseDay {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &__label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__chooseDay {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+  }
+
+  &__progress {
+    height: 3px;
+    width: 40%;
+    background: #1f2937;
+  }
+}
+
+.day {
+  min-width: 90px;
+  padding: 12px;
+  background: #d9d6cf;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+
+  span {
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+}
+
+.dayActive {
+  background: #e8b646;
+}

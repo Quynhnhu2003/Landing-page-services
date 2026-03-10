@@ -1,12 +1,13 @@
-"use-client";
+"use client";
 
 // ** Styles Import
 import styles from "./index.module.scss";
 
-export default function Social() {
+function Social() {
   return (
     
     <div className={styles.social}>
+      {/* facebook */}
     <button>
       <svg
         width="24"
@@ -21,6 +22,8 @@ export default function Social() {
         />
       </svg>
     </button>
+
+    {/* tiktok */}
     <button>
       <svg
         width="24"
@@ -36,6 +39,8 @@ export default function Social() {
         />
       </svg>
     </button>{" "}
+    
+    {/* zalo */}
     <button>
       <svg
         width="28"
@@ -99,3 +104,5 @@ export default function Social() {
   </div>
   );
 }
+
+export default Social
