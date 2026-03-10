@@ -1,0 +1,66 @@
+.bookingContainer {
+  width: 100%;
+  max-width: 460px;
+  margin: auto;
+  padding: 24px 12px;
+  background: #e9e4da;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+overflow-y: auto;
+  &__header {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #824c08;
+    border-bottom: 1px solid #00000012;
+    padding-bottom: 24px;
+  }
+
+  &__submit {
+    margin-top: 10px;
+    background: #8a5407;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+/* responsive */
+
+@media (max-width: 768px) {
+
+  .bookingContainer {
+    padding: 20px;
+
+    &__header {
+      font-size: 22px;
+    }
+
+    &__chooseTime {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .bookingContainer {
+
+    &__chooseTime {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+}

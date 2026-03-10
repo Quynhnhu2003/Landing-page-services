@@ -4,9 +4,9 @@ import styles from "./index.module.scss";
 // ** Another Import
 import { CartShoppingProps } from "@/ultils/type/NavbarType";
 
-function CartShopping({quantity}: CartShoppingProps) {
+function CartShopping({quantity, onClick}: CartShoppingProps) {
   return (
-    <div className={styles.cartContainer}>
+    <div className={styles.cartContainer} onClick={onClick}>
       <svg
         width="24"
         height="24"

@@ -1,0 +1,37 @@
+.chooseTime {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &__chooseTime {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    
+  }
+  &__label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.time {
+  padding: 14px 6px;
+  background: #d9d6cf;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
+.timeActive {
+  background: #b97949;
+  color: white;
+}
